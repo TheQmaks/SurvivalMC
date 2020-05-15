@@ -71,8 +71,6 @@ void inject() {
 		getClass(bcd)
 	};
 	jvmtiEnv->RedefineClasses(sizeof(classes) / sizeof(jvmtiClassDefinition), classes);
-	
-	free(classes);
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved) {
